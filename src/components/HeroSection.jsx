@@ -18,12 +18,12 @@ const HeroSection = () => {
       id="home" 
       className="flex flex-col items-center justify-center text-center mt-10 px-4 md:px-0">
       {/* Hero Image */}
-        {/* <motion.img
+        <motion.img
         data-aos="fade-up"
         src={heroImage}
         alt="Mubarak"
         className="w-40"
-        /> */}
+        />
 
       {/* Text */}
     <h2 
