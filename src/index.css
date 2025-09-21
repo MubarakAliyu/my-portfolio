@@ -1,0 +1,119 @@
+/* src/index.css
+   Tailwind v4 entry + fonts + helper classes + dark-mode compatibility.
+*/
+@import "tailwindcss";
+
+/* ---------- Google font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+/* ---------- local font-face definitions ---------- */
+/* Ensure these files exist in src/fonts/ */
+@font-face {
+  font-family: 'PolySansTrialBulky';
+  src: url('./fonts/PolySansTrial-Bulky.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PolySansTrialMedian';
+  src: url('./fonts/PolySansTrial-Median.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BrittanySignature';
+  src: url('./fonts/BrittanySignatureRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PolySans';
+  src: url('./fonts/PolySansTrial-SlimMono.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PolySansSlim';
+  src: url('./fonts/PolySansTrial-Slim.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PolySansBulky';
+  src: url('./fonts/PolySansTrial-Bulky.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PolySansMedianMono';
+  src: url('./fonts/PolySansTrial-MedianMono.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- helper classes (font stacks) ---------- */
+.font-bulkyTrial { font-family: 'PolySansTrialBulky', system-ui, sans-serif; }
+.font-medianTrial { font-family: 'PolySansTrialMedian', ui-monospace, monospace; }
+.font-brittany { font-family: 'BrittanySignature', 'Brush Script MT', cursive; }
+.font-figtree { font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+
+.font-bulky {
+  font-family: 'PolySansBulky', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.font-medianMono {
+  font-family: 'PolySansMedianMono', ui-monospace, "SFMono-Regular", Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+}
+.font-slimMono {
+  font-family: 'PolySans', ui-monospace, "SFMono-Regular", Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+}
+.font-slim {
+  font-family: 'PolySansSlim', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- small color helper ---------- */
+.text-accent { color: #CC4B2C; }
+
+/* ---------- layout & global defaults ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* default light mode */
+body {
+  background-color: #ffffff;
+  color: #54423D; /* default text color you used previously */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 72px;
+}
+
+/* Tailwind dark utilities rely on `html.dark` */
+/* Keep this so Tailwind's `dark:` classes work (e.g. dark:bg-.., dark:text-..) */
+html.dark body {
+  background-color: #1A1918;
+  color: #EDEDED;
+}
+
+/* Optional compatibility: preserve legacy `body.theme-dark` selectors */
+body.theme-dark {
+  background-color: #1A1918;
+  color: #EDEDED;
+}
+body.theme-dark a { color: inherit; }
+
+/* Keep color transition behavior for both selectors */
+body, html.dark body, body.theme-dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- small utility overrides / accessibility ---------- */
+/* Example: ensure links inherit text color unless styled */
+/* a { color: inherit; } */
+
+/* ---------- end of file ---------- */
