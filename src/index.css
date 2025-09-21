@@ -95,22 +95,22 @@ body {
 
 /* Tailwind dark utilities rely on `html.dark` */
 /* Keep this so Tailwind's `dark:` classes work (e.g. dark:bg-.., dark:text-..) */
-html.dark body {
+/* html.dark body {
   background-color: #1A1918;
   color: #EDEDED;
-}
+} */
 
 /* Optional compatibility: preserve legacy `body.theme-dark` selectors */
-body.theme-dark {
+/* body.theme-dark {
   background-color: #1A1918;
   color: #EDEDED;
 }
-body.theme-dark a { color: inherit; }
+body.theme-dark a { color: inherit; } */
 
 /* Keep color transition behavior for both selectors */
-body, html.dark body, body.theme-dark {
+/* body, html.dark body, body.theme-dark {
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 /* ---------- small utility overrides / accessibility ---------- */
 /* Example: ensure links inherit text color unless styled */
